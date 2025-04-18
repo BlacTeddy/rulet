@@ -1,0 +1,48 @@
+body {
+    display: grid;
+    place-items: center; /* Centers both horizontally & vertically */
+    height: 100vh;
+    margin: 0;
+    background-color: #000; /* Just to see the effect */
+    /* text */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+.container {
+    display: grid;
+    place-items: center; /* Centers both horizontally & vertically */
+    height: 100vh;
+    position: relative;
+}
+
+#rouletteCanvas {
+    border: 2px solid blue;
+    margin: 1px solid red;/* remove */
+    border-radius:50%;
+    background-color: lightgray;
+}
+
+#spinButton {
+    /* location */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    /*color*/
+    border:none; /* flat looking */
+    border-radius: 40%; /* Makes it a perfect circle */
+    background-color: #008000; /* Customize the color */
+    /* extra color */
+    transform: translate(-50%, -50%); /* Ensures the button is centered */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, .5); /* Adds depth */
+}
+#spinButton:hover {
+    background-color: #007000;
+    box-shadow: 0px 6px 12px rgba(0, 200, 0, 0.4);
+    transition: transform 0.2s ease-in-out;
+}
+#spinButton:active {
+    box-shadow: inset 6px 6px 8px rgba(0, 0, 0, 0.7); /* Appears pushed down */
+}
